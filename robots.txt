@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jarvis-mns1.github.io/mns1-website-preview/sitemap.xml
