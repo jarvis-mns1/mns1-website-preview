@@ -5,7 +5,8 @@
     document.querySelectorAll('nav a, footer a').forEach(function(a){
       var h = a.getAttribute('href');
       if(!h) return;
-      if(h.charAt(0)==='#'){
+if(h === '/mns1-website-preview/mns1-website-preview' || h === '/mns1-website-preview/mns1-website-preview/') { a.setAttribute('href', map.home); a.onclick = function(e){ e.stopImmediatePropagation(); window.location.href = map.home; }; }
+            if(h.charAt(0)==='#'){
         var id = h.slice(1);
         if(map[id]){
           a.setAttribute('href', map[id]);
@@ -13,7 +14,7 @@
         }
       }
       Object.keys(map).forEach(function(k){
-        if(h === '/mns1-website-preview/'+k+'.html' || h === '/mns1-website-preview/'+k) {
+        if(h === '/mns1-website-preview/'+k+'.html' || h === '/mns1-website-preview/'+k || h === '/mns1-website-preview/mns1-website-preview/'+k+'.html' || h === '/mns1-website-preview/mns1-website-preview/'+k) {
           a.setAttribute('href', map[k]);
           a.onclick = function(e){ e.stopImmediatePropagation(); window.location.href = map[k]; };
         }
