@@ -22,7 +22,7 @@ if(h === '/mns1-website-preview/mns1-website-preview' || h === '/mns1-website-pr
     });
     document.querySelectorAll('button, a').forEach(function(el){
       var t = el.textContent.trim().toLowerCase();
-      if(t.indexOf('apply')===0 || t==='apply now' || t==='apply in 4 min' || t==='apply in 4 minutes'){
+      if(t.indexOf('apply')===0 || t==='apply now' || t==='apply in 4 min' || t==='apply in 4 mins'){
         el.onclick = function(e){ e.preventDefault(); e.stopImmediatePropagation(); window.location.href = map.apply; };
         if(el.tagName==='A') el.setAttribute('href', map.apply);
       }
